@@ -26,6 +26,7 @@ import {
 import { switchChain } from 'wagmi/actions'
 import { optimism, sepolia } from 'wagmi/chains'
 
+import Link from 'next/link'
 import { config } from '../wagmi'
 import { wagmiContractConfig } from './contracts'
 
@@ -93,6 +94,18 @@ function Connect() {
 
   return (
     <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+        }}
+      >
+        <Link href={`/dynamic/${Date.now()}`}>go to Dynamic Page</Link>
+        <Link href={`/dynamic/${Date.now()}`}>go to Dynamic Page 1</Link>
+        <Link href={`/dynamic/${Date.now()}`}>go to Dynamic Page 2</Link>
+      </div>
+
       <h2>Connect</h2>
       {connectors.map((connector) => (
         <button

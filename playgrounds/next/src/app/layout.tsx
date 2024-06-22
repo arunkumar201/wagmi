@@ -17,6 +17,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout(props: { children: ReactNode }) {
   const initialState = cookieToInitialState(config, headers().get('cookie'))
+
+  console.debug('🚀 ~ RootLayout ~ initialState:', initialState)
+
   return (
     <html lang="en">
       <body className={inter.className}>
