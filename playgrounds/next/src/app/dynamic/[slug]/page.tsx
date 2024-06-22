@@ -2,8 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 import { DisconnectBtn } from '../../disconnectBtn'
 
-
-
 const Page = () => {
   return (
     <div>
